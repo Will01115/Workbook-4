@@ -21,6 +21,12 @@ let tax = subtotal * 0.08;
 let tip = subtotal * 0.18;
 let total = subtotal + tax + tip;
 
-console.log("subtotal: $" + subtotal);
-console.log("tip: $" + tip.toFixed(2));
-console.log("total: $" +total.toFixed(2));
+// console.log("subtotal: $" + subtotal);
+// console.log("tip: $" + tip.toFixed(2));
+// console.log("total: $" +total.toFixed(2));
+
+console.log(`
+Subtotal: $${subtotal.toFixed(2)}
+   + Tax: $${tax.toFixed(2)}
+ = Total: $${total.toFixed(2)}
+`);
