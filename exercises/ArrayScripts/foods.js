@@ -24,4 +24,3 @@ let total = subtotal + tax + tip;
 console.log("subtotal: $" + subtotal);
 console.log("tip: $" + tip.toFixed(2));
 console.log("total: $" +total.toFixed(2));
-
