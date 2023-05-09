@@ -11,9 +11,15 @@ function getAverage(scores){
         totalOfAllScores = totalOfAllScores + score;
         // totalOfAllScores += score;
     }
+    let numeberOfScores = myScores.length;
+    averageScore = totalOfAllScores / numeberOfScores;
     console.log(totalOfAllScores);
     return averageScore;
 }
 
 let averageScoreForMyScores = getAverage(myScores);
+console.log("----------My Scores Average----------");
+console.log(averageScoreForMyScores);
 let averageScoreForYourScores = getAverage(yourScores);
+console.log("---------Your Scores Average-----------");
+console.log(averageScoreForYourScores);
