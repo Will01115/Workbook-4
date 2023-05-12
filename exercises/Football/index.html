@@ -53,7 +53,6 @@
  {code:"WAS", name:"Washington Commanders", plays:"Landover, MD"},[[]]
 ];
 
-
 const teamsList = document.getElementById("teams-list");
 
 function loadTeamsList() {
@@ -83,15 +82,21 @@ function getTeamByPlays(plays) {
   }
 }
 
-function displaySelectedTeam() {
-  const messageParagraph = document.querySelector("#message-paragraph");
-  const teamPlays = teamsList.value;
-  const selectedTeam= getTeamByPlays(teamPlays);
-  messageParagraph.innerText = `${selectedTeam.name} (${selectedTeam.plays})`;
-}
+    function displaySelectedTeam() {
+        const messageParagraph = document.querySelector("#message-paragraph");
+        const teamPlays = teamsList.value;
 
-loadTeamsList();
+        const selectedTeam= getTeamByPlays(teamPlays);
+        if (selectedTeam) {
+          messageParagraph.innerText = `${selectedTeam.name} (${selectedTeam.plays})`;
+        } else {
+            messageParagraph.innerText="";
+        }
+        
+        }
 
-     </script>
-   </body>
+    loadTeamsList();
+
+    </script>
+  </body>
 </html>
